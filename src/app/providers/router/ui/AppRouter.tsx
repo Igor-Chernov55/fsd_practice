@@ -1,7 +1,6 @@
 import React, {Suspense} from 'react';
 import {Navigate, Route, Routes, useLocation} from "react-router-dom";
-import {RouteConfig} from "./routeData";
-import Login from "../pages/Login/Login";
+import { RouteConfig } from '../../../../shared/config';
 
 export const AppRouter = () => {
     const {pathname} = useLocation()
