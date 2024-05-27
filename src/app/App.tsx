@@ -11,6 +11,6 @@ export const App:FC = () => {
         const {theme, toggleTheme} = useTheme();
 
     return <AppBlock $theme={theme}>
-
+        <span>член</span>
     </AppBlock>
 };

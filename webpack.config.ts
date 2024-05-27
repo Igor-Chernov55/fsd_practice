@@ -5,7 +5,7 @@ export default (env: any) => {
     const mode = env.mode || 'development';
 
     const paths = {
-        entry: path.resolve(__dirname, 'src', 'index.tsx'),
+        entry: path.resolve(__dirname, 'src/app', 'index.tsx'),
         template: path.resolve(__dirname, 'public', 'index.html'),
         path: path.resolve(__dirname, 'build'),
         src: path.resolve(__dirname, "src")

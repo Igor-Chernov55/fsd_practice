@@ -10,7 +10,7 @@ export const buildResolve = ({src}: BuildPaths): ResolveOptions => {
             '@mui/styled-engine': '@mui/styled-engine-sc'
         },
         // preferAbsolute: true,
-        modules: [src, "node-modules"],
-        mainFiles: ['index'],
+        // modules: [src, "node-modules"],
+        // mainFiles: ['index'],
     }
 };

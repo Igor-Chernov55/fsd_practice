@@ -4,7 +4,7 @@ export const buildDevServer = ({valueProxy}: BuildProxy) => {
     return {
         historyApiFallback: true,
         port:  valueProxy.port,
-        // open: true,
+        open: true,
         hot: true,
         // proxy: [
         //     {

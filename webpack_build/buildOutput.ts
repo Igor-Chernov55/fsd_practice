@@ -7,6 +7,6 @@ export const buildOutput = (options: BuildPaths) => {
          filename: '[name][contenthash].js',
          clean: true,
          path: options.path,
-         // publicPath: '/',
+         publicPath: '/',
      }
 }
