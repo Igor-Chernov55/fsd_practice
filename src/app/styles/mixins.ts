@@ -34,3 +34,7 @@ export const borderRadius = {
         border-radius: 8px;
     `
 }
+
+export const sizes = {
+    navbar_high: '50px'
+}

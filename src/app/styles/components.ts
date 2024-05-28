@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {colors, fonts} from "./mixins";
+import {colors, fonts, sizes} from "./mixins";
 import {Box} from "@mui/material";
 
 export const Title = styled.h1`
@@ -22,5 +22,5 @@ export const MainContainer = styled(Box)`
     padding: 65px 69px;
     background-color: ${colors.backgroundMain};
     overflow-y: auto;
-    height: 92vh;
+    height: ${sizes.navbar_high};
 `
