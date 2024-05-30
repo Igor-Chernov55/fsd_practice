@@ -8,8 +8,9 @@ export enum Theme {
     LIGHT = 'light',
     DARK = 'dark'
 }
+
 export const App:FC = () => {
-        const {theme, toggleTheme} = useTheme();
+        const {theme} = useTheme();
 
     return <AppBlock $theme={theme}>
         <Navbar />
