@@ -1,6 +1,7 @@
 import React, {Suspense} from 'react';
 import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 import { RouteConfig } from '../../../../shared/config';
+import {PageWrapper} from "../../../App.styled";
 
 export const AppRouter = () => {
     const {pathname} = useLocation()
@@ -12,7 +13,9 @@ export const AppRouter = () => {
                      return   <Route
                                 key={key}
                                 path={path}
-                                element={element}/>
+                                element={
+                                    <PageWrapper>element</PageWrapper>
+                     }/>
                 })}
                 <Route path="*" element={<Navigate to={'/objects_list'}/>}/>
             </Routes>

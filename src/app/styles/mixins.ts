@@ -36,5 +36,7 @@ export const borderRadius = {
 }
 
 export const sizes = {
-    navbar_high: '50px'
+    navbar_high: '50px',
+    sidebar_width: '300px',
+    sidebar_width_collapsed: '80px',
 }

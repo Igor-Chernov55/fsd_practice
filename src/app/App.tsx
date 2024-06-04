@@ -1,8 +1,10 @@
 import 'react-toastify/dist/ReactToastify.css';
-import {AppBlock} from "./App.styled";
+import {AppBlock, ContentPage} from "./App.styled";
 import {FC} from "react";
 import {useTheme} from "./providers/themeProvider";
 import {Navbar} from "../widgets/Navbar";
+import {Sidebar} from "../widgets/Sidebar";
+import {AppRouter} from "./providers/router";
 
 export enum Theme {
     LIGHT = 'light',
@@ -14,5 +16,9 @@ export const App:FC = () => {
 
     return <AppBlock $theme={theme}>
         <Navbar />
+        <ContentPage>
+            <Sidebar />
+            <AppRouter />
+        </ContentPage>
     </AppBlock>
 };

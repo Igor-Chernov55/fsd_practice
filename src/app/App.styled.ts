@@ -9,3 +9,10 @@ export const AppBlock = styled(Box)<{ $theme: Theme }>`
     min-height: 100vh; 
     ${props => props.$theme === Theme.DARK ? `${ThemeDark};` : `${ThemeLight}`}
 `
+export const ContentPage = styled(Box)`
+    display: flex;
+`
+export const PageWrapper = styled(Box)`
+    flex-grow: 1;
+    padding: 20px;
+`
