@@ -14,11 +14,12 @@ export enum Theme {
 export const App:FC = () => {
         const {theme} = useTheme();
 
-    return <AppBlock $theme={theme}>
+    return(
+        <AppBlock $theme={theme}>
         <Navbar />
         <ContentPage>
             <Sidebar />
             <AppRouter />
         </ContentPage>
-    </AppBlock>
+    </AppBlock>)
 };

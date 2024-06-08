@@ -7,7 +7,7 @@ import {Theme} from "./App";
 
 export const AppBlock = styled(Box)<{ $theme: Theme }>`
     min-height: 100vh; 
-    ${props => props.$theme === Theme.DARK ? `${ThemeDark};` : `${ThemeLight}`}
+    ${props => props.$theme === Theme.DARK ? `${ThemeDark};` : `${ThemeLight};`}
 `
 export const ContentPage = styled(Box)`
     display: flex;

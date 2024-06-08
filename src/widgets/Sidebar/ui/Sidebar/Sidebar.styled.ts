@@ -8,7 +8,7 @@ export const SidebarBlock = styled(Box)<{$toggleSidebar: boolean}>`
     height: calc(100vh - ${sizes.navbar_high});
     width: ${props => props?.$toggleSidebar ? `${sizes.sidebar_width}`: `${sizes.sidebar_width_collapsed}`};
     background: ${ThemeDark.invert_bg_color};
-    transition: width .3;
+    transition: width .3s;
 `
 export const Switchers = styled(Box)`
     position: absolute;
