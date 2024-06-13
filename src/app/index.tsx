@@ -8,7 +8,8 @@ import ThemeProvider from "./providers/themeProvider/ui/ThemeProvider";
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
+import "../shared/config/i18n/i18n";
 
 root.render(
     <QueryClientProvider client={queryClient}>

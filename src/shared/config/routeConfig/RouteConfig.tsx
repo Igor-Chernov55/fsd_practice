@@ -3,17 +3,17 @@ import MainPage from "../../../pages/MainPage/ui/MainPage";
 import AboutPage from "../../../pages/AboutPage/ui/AboutPage";
 
 enum Routes {
-    LIST = 'objects_list',
-    CREATE_ANALYSIS = 'create_analysis',
+    MAIN = 'main',
+    ABOUT_PAGE = 'about_page',
 }
 export const RoutePath: Record<Routes, string> = {
-    [Routes.LIST]: '/objects_list',
-    [Routes.CREATE_ANALYSIS]: '/objects_list/create_analysis',
+    [Routes.MAIN]: '/main',
+    [Routes.ABOUT_PAGE]: '/about_page',
 }
 
 
 export const RouteConfig = {
-    [RoutePath.objects_list]: {path: RoutePath.objects_list, element: <MainPage />},
-    [RoutePath.create_analysis]: {path: RoutePath.create_analysis, element: <AboutPage />},
+    [RoutePath.main]: {path: RoutePath.main, element: <MainPage />},
+    [RoutePath.about_page]: {path: RoutePath.about_page, element: <AboutPage />},
 }
 

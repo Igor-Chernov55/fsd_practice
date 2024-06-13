@@ -4,20 +4,19 @@ import { RouteConfig } from '../../../../shared/config';
 import {PageWrapper} from "../../../App.styled";
 
 export const AppRouter = () => {
-    const {pathname} = useLocation()
 
     return (
-        <Suspense>
+        <Suspense fallback={""}>
             <Routes>
                 {Object.values(RouteConfig).map(({path, element}, key) => {
-                     return   <Route
+                     return <Route
                                 key={key}
                                 path={path}
                                 element={
-                                    <PageWrapper>element</PageWrapper>
+                                    <PageWrapper>{element}</PageWrapper>
                      }/>
                 })}
-                <Route path="*" element={<Navigate to={'/objects_list'}/>}/>
+                <Route path="*" element={<Navigate to={'/'}/>}/>
             </Routes>
         </Suspense>
     );

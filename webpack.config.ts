@@ -11,8 +11,9 @@ export default (env: any) => {
         src: path.resolve(__dirname, "src")
     }
 
+    const isDev = mode === 'development';
     const targetProxy = 'http://10.24.65.8:8001'
     const portDevServer = 3001
 
-    return buildConfig({paths, mode, port: portDevServer, target: targetProxy });
+    return buildConfig({paths, mode, isDev, port: portDevServer, target: targetProxy });
 };

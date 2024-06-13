@@ -7,8 +7,8 @@ import {buildDevServer} from "./buildDevServer";
 import {buildPlugins} from "./buildPlugins";
 import {BuildConfig} from "./types/config";
 
-export const buildConfig = ({paths, mode, target, port}: BuildConfig) => {
-    const valueProxy = {target, port}
+export const buildConfig = ({paths, isDev, mode, target, port}: BuildConfig) => {
+    const valueProxy = {target, port, isDev}
 
     return {
         entry: paths.entry,
@@ -20,6 +20,6 @@ export const buildConfig = ({paths, mode, target, port}: BuildConfig) => {
         resolve: buildResolve(paths),
         optimization: buildOptimization(),
         devServer: buildDevServer({paths, valueProxy}),
-        plugins: buildPlugins(paths)
+        plugins: buildPlugins({paths, isDev})
     }
 }

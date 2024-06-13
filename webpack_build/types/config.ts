@@ -7,9 +7,12 @@ export interface BuildPaths {
     src: string
 }
 
+export type BuildPathWithDev = Pick<BuildConfig, "isDev" | "paths">
+
 export interface BuildConfig {
     mode: string;
     paths: BuildPaths
+    isDev: boolean
     target: string
     port: number
 }
