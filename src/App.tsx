@@ -7,17 +7,16 @@ import {Suspense} from "react";
 function App() {
 
   return (
-    <div>
-        <Link to={'/'}>Главная</Link>
-        <Link to={'/about'}>О сайте</Link>
 
-        <Suspense fallback={<p>...Loading</p>}>
-            <Routes>
-            <Route path={'/about'} element={<AboutPageAsync/>}/>
-            <Route path={'/'} element={<MainPageAsync/>}/>
-        </Routes>
-        </Suspense>
-    </div>
+      <><Link to={'/'}>Главная</Link>
+          <Link to={'/about'}>О сайте</Link>
+
+          <Suspense fallback={<p>...Loading</p>}>
+              <Routes>
+                  <Route path={'/about'} element={<AboutPageAsync/>}/>
+                  <Route path={'/'} element={<MainPageAsync/>}/>
+              </Routes>
+          </Suspense></>
   )
 }
 
