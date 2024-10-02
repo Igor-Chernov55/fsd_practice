@@ -1,4 +1,5 @@
-import {Title} from "../../app/styles/variables/components.ts";
+import { Title } from "../../AboutPage/ui/AboutPage.styled";
+
 
 const MainPage = () => {
     return (

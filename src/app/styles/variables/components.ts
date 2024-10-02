@@ -19,8 +19,7 @@ export const MainText = styled.p`
     margin-bottom: 14px;
 `
 export const MainContainer = styled('div')`
-    padding: 107px 35px 10px 35px;
     background-color: ${props => props.theme.body};
-    overflow-y: auto;
+    padding: 0;
     height: 100vh;
 `

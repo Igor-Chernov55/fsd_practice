@@ -1,12 +1,13 @@
-import './App.css'
 import {Link, Route, Routes} from "react-router-dom";
-import {AboutPageAsync} from "./pages/AboutPage";
-import {MainPageAsync} from "./pages/MainPage";
+
 import {Suspense} from "react";
-import {MainContainer} from "./app/styles/variables/components.ts";
-import {useTheme} from "./entites/hooks/useTheme";
+import {MainContainer} from "./styles/variables/components.ts";
 import {ThemeProvider} from "styled-components";
-import {themes} from "./app/styles/themes/themes.styled.tsx";
+
+import {useTheme} from "../shared/lib/useTheme";
+import {themes} from "./styles/themes/themes.styled.tsx";
+import {MainPage} from "../pages/MainPage";
+import {AboutPage} from "../pages/AboutPage";
 
 export enum Theme {
     LIGHT = "light",
@@ -27,8 +28,8 @@ function App() {
 
             <Suspense fallback={<p>...Loading</p>}>
                 <Routes>
-                    <Route path={'/about'} element={<AboutPageAsync/>}/>
-                    <Route path={'/'} element={<MainPageAsync/>}/>
+                    <Route path={'/about'} element={<MainPage />}/>
+                    <Route path={'/'} element={<AboutPage />}/>
                 </Routes>
             </Suspense>
         </MainContainer>
