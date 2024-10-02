@@ -1,9 +1,10 @@
+import {Title} from "../../app/styles/variables/components.ts";
 
 const MainPage = () => {
     return (
-        <div>
+        <Title>
             main page
-        </div>
+        </Title>
     );
 };
 
