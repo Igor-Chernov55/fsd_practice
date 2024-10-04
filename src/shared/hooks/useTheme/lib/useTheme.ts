@@ -1,4 +1,4 @@
-import {Theme} from "../../../app/App.tsx";
+import {Theme} from "../../../../app/App.tsx";
 import {useState} from "react";
 
 const defaultTheme = localStorage.getItem('theme') as Theme || Theme.LIGHT

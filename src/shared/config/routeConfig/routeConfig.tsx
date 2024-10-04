@@ -3,18 +3,18 @@ import MainPage from "../../../pages/MainPage/ui/MainPage.tsx";
 import {AboutPage} from "../../../pages/AboutPage";
 
 export enum AppRoutes {
-    MAIN = 'main',
+    MAIN = '/',
     ABOUT = 'about'
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: 'main',
+    [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: 'about',
 }
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.MAIN]: {
-        path: RoutePath.main,
+        path: RoutePath["/"],
         element: <MainPage />
     },
     [AppRoutes.ABOUT]: {
