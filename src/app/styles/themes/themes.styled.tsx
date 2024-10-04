@@ -1,11 +1,14 @@
 
 export const themes = {
     light: {
-        body: '#1E3E62',
-        color: '#fff'
+        body: '#d9d3d3',
+        color: '#000',
+
+        backgroundColor: '#e8e8ea'
     },
     dark: {
-        body: '#FAF7F0',
-        color: '#000'
+        body: '#1E3E62',
+        color: '#fff',
+        backgroundColor: '#090949'
     }
 }
