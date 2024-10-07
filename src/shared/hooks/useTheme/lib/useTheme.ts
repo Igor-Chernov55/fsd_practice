@@ -1,10 +1,11 @@
 import {Theme} from "../../../../app/App.tsx";
-import {useState} from "react";
+import {useContext, useState} from "react";
+import {ToggleThemeProvider} from "../../../../app/providers/theme/lib/ToggleThemeProvider.ts";
 
-const defaultTheme = localStorage.getItem('theme') as Theme || Theme.LIGHT
+const defaultTheme = localStorage.getItem('theme') || 'light'
 
 export const useTheme = () => {
-    const [theme, setTheme] = useState<Theme>(defaultTheme);
+    const {theme, setTheme} = useContext<Theme>(ToggleThemeProvider);
 
     const toggleTheme = () => {
         setTheme(prevState => prevState === Theme.LIGHT ? Theme.DARK : Theme.LIGHT )
