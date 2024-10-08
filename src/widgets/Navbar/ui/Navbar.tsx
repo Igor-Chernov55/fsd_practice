@@ -1,14 +1,29 @@
 import {Link} from "react-router-dom";
-import {BlockNavbar} from "./NavBar.styled";
+import {BlockNavbar, BlockNavLinks, ItemNavLinks, ListNavLinks} from "./NavBar.styled";
 import {useTheme} from "../../../shared/hooks/useTheme";
 import {Theme} from "../../../app/App.tsx";
-
+import {SubTitle} from "../../../app/styles/variables/components.ts";
+import {dataNavBar} from "../../../shared/utils/dataNavbar";
 
 export const Navbar = () => {
     const {toggleTheme} = useTheme()
 
     return (
         <BlockNavbar>
+
+            <BlockNavLinks>
+                <ListNavLinks>
+                    {dataNavBar.map(({label, link}, index) => {
+                        return (
+                                <ItemNavLinks key={index}>
+                                    <Link to={link}>
+                                        <SubTitle>{label}</SubTitle>
+                                    </Link>
+                                </ItemNavLinks>
+                        )})}
+                </ListNavLinks>
+            </BlockNavLinks>
+
             <button onClick={toggleTheme}>
                 {localStorage.getItem('theme') === Theme.LIGHT ?
                     <img style={{width: '20px', height: '15px'}} src="src/shared/assets/icons/light_theme.png" alt=""/>
@@ -17,8 +32,6 @@ export const Navbar = () => {
                 }
             </button>
 
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/about'}>О сайте</Link>
         </BlockNavbar>
     );
 };

@@ -21,7 +21,7 @@ export const fonts = {
     `,
     small: () => css`
         font-weight: 400;
-        font-size: 16px;
+        font-size: 18px;
     `
 }
 

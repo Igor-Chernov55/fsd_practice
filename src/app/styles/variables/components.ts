@@ -8,15 +8,14 @@ export const Title = styled.h1`
     user-select: none;
 `
 export const SubTitle = styled.h2`
-    color: ${colors.gray};
-    ${fonts.middle};
-    margin-top: 32px;
-    margin-bottom: 8px;
+    color: ${props => props.theme.color};
+    ${fonts.small};
 `
 export const MainText = styled.p`
     color: ${colors.darkGray};
     ${fonts.small};
     margin-bottom: 14px;
+    
 `
 export const MainContainer = styled('div')`
     background-color: ${props => props.theme.body};
