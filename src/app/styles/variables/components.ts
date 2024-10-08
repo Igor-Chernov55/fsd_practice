@@ -21,5 +21,6 @@ export const MainContainer = styled('div')`
     background-color: ${props => props.theme.body};
     padding: 0;
     height: 100vh;
+    display: flex;
     overflow: hidden;
 `

@@ -6,7 +6,7 @@ import {SubTitle} from "../../../app/styles/variables/components.ts";
 import {dataNavBar} from "../../../shared/utils/dataNavbar";
 
 export const Navbar = () => {
-    const {toggleTheme} = useTheme()
+    const {theme, toggleTheme} = useTheme()
 
     return (
         <BlockNavbar>
@@ -25,10 +25,10 @@ export const Navbar = () => {
             </BlockNavLinks>
 
             <button onClick={toggleTheme}>
-                {localStorage.getItem('theme') === Theme.LIGHT ?
-                    <img style={{width: '20px', height: '15px'}} src="src/shared/assets/icons/light_theme.png" alt=""/>
+                {theme !== Theme.LIGHT ?
+                    <img style={{width: '20px', height: '15px'}} src="src/shared/assets/icons/light_theme.png" alt="light_theme" />
                     :
-                    <img style={{width: '15px', height: '15px'}} src="src/shared/assets/icons/dark_theme.png" alt=""/>
+                    <img style={{width: '15px', height: '15px'}} src="src/shared/assets/icons/dark_theme.png" alt="dark_theme" />
                 }
             </button>
 

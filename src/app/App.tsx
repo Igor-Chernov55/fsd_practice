@@ -5,6 +5,8 @@ import {AppRouter} from "./providers/router";
 import {Navbar} from "../widgets/Navbar";
 import {useContext} from "react";
 import {ToggleThemeProvider} from "./providers/theme/lib/ToggleThemeProvider.ts";
+import {Sidebar} from "../widgets/Sidebar";
+import {ContainerPage} from "./App.styled.ts";
 
 export enum Theme {
     LIGHT = "light",
@@ -15,12 +17,16 @@ function App() {
     const {theme} = useContext(ToggleThemeProvider);
 
     return (
-            <ThemeProvider theme={theme === Theme.LIGHT ? themes.light : themes.dark}>
-                <MainContainer>
+        <ThemeProvider theme={theme === Theme.LIGHT ? themes.light : themes.dark}>
+            <MainContainer>
+                <Sidebar/>
+                <ContainerPage>
                     <Navbar/>
+
                     <AppRouter/>
-                </MainContainer>
-            </ThemeProvider>
+                </ContainerPage>
+            </MainContainer>
+        </ThemeProvider>
     )
 }
 
