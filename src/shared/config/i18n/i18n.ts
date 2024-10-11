@@ -1,16 +1,23 @@
-import i18next from 'i18next';
+import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import translation from './en/translation.json';
 
-i18next.use(initReactI18next).init({
-    lng: 'en', // if you're using a language detector, do not define the lng option
-    debug: true,
-    resources: {
-        en: {
-            translation,
+import Backend from 'i18next-http-backend';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+i18n
+    .use(Backend)
+    .use(LanguageDetector)
+    .use(initReactI18next)
+    .init({
+        fallbackLng: 'ru',
+        debug: import.meta.env.PROD,
+        interpolation: {
+            escapeValue: false,
         },
-    },
-    // if you see an error like: "Argument of type 'DefaultTFuncReturn' is not assignable to parameter of type xyz"
-    // set returnNull to false (and also in the i18next.d.ts options)
-    // returnNull: false,
-});
+        backend: {
+            loadPath: '/locales/{{ling}}/{{ns}}.json'
+        }
+    });
+
+
+export default i18n;

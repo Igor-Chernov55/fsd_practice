@@ -1,10 +1,13 @@
-import { Title } from "../../AboutPage/ui/AboutPage.styled";
+import {Title} from "../../AboutPage/ui/AboutPage.styled";
+import {useTranslation} from "react-i18next";
 
 
 const MainPage = () => {
+    const {t} = useTranslation('mainPage')
+
     return (
         <Title>
-            main page
+            {t('Главная страница')}
         </Title>
     );
 };
