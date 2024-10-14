@@ -11,8 +11,6 @@ export const Navbar = () => {
 
     return (
         <BlockNavbar>
-
-
             <BlockNavLinks>
                 <ListNavLinks>
                     {dataNavBar.map(({label, link}, index) => {
