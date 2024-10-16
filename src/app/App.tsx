@@ -21,7 +21,7 @@ function App() {
         <ThemeProvider theme={theme === Theme.LIGHT ? themes.light : themes.dark}>
             <Suspense fallback=''>
                 <MainContainer>
-                    <Sidebar/>
+                    <Sidebar />
                     <ContainerPage>
                         <Navbar/>
                         <AppRouter/>
