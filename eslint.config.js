@@ -11,6 +11,11 @@ export default [
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off"
     }},
+    {
+      env: {
+          jest: true,
+      }
+    },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
