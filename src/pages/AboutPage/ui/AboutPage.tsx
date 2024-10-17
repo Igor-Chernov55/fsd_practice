@@ -1,4 +1,4 @@
-import {Title} from "./AboutPage.styled.ts";
+import {Title} from "./AboutPage.styled";
 import {useTranslation} from "react-i18next";
 
 

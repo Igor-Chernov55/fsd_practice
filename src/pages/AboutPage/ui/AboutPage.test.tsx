@@ -1,11 +1,10 @@
-import renderer from 'react-test-renderer';
+import {render} from "@testing-library/react";
+import AboutPage from "./AboutPage";
 
-import {AboutPage} from "../index.ts";
 
 describe('AboutPage', () => {
-    it('test render', () => {
-        renderer(<AboutPage />);
-
+    it('should render AboutPage', () => {
+       render(<AboutPage />);
     })
 
 })
