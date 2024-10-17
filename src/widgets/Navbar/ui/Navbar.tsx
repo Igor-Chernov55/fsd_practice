@@ -1,10 +1,10 @@
 import {Link} from "react-router-dom";
 import {BlockNavbar, BlockNavLinks, ItemNavLinks, ListNavLinks} from "./NavBar.styled";
 import {useTheme} from "../../../shared/hooks/useTheme";
-import {Theme} from "../../../app/App.tsx";
-import {SubTitle} from "../../../app/styles/variables/components.ts";
+import {Theme} from "../../../app/App";
+import {SubTitle} from "../../../app/styles/variables/components";
 import {dataNavBar} from "../../../shared/utils/dataNavbar";
-import {SwitchLang} from "../../SwitchLang/ui/SwitchLang.tsx";
+import {SwitchLang} from "../../SwitchLang/ui/SwitchLang";
 
 export const Navbar = () => {
     const {theme, toggleTheme} = useTheme()

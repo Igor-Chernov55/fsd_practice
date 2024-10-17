@@ -1,12 +1,12 @@
-import {MainContainer} from "./styles/variables/components.ts";
+import {MainContainer} from "./styles/variables/components";
 import {ThemeProvider} from "styled-components";
-import {themes} from "./styles/themes/themes.styled.tsx";
+import {themes} from "./styles/themes/themes.styled";
 import {AppRouter} from "./providers/router";
 import {Navbar} from "../widgets/Navbar";
 import {Suspense, useContext} from "react";
-import {ToggleThemeProvider} from "./providers/theme/lib/ToggleThemeProvider.ts";
+import {ToggleThemeProvider} from "./providers/theme/lib/ToggleThemeProvider";
+import {ContainerPage} from "./App.styled";
 import {Sidebar} from "../widgets/Sidebar";
-import {ContainerPage} from "./App.styled.ts";
 
 export enum Theme {
     LIGHT = "light",
