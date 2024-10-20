@@ -7,6 +7,7 @@ import {Suspense, useContext} from "react";
 import {ToggleThemeProvider} from "./providers/theme/lib/ToggleThemeProvider";
 import {ContainerPage} from "./App.styled";
 import {Sidebar} from "../widgets/Sidebar";
+import {ErrorBoundary} from "react-error-boundary";
 
 export enum Theme {
     LIGHT = "light",
@@ -20,13 +21,16 @@ function App() {
     return (
         <ThemeProvider theme={theme === Theme.LIGHT ? themes.light : themes.dark}>
             <Suspense fallback=''>
-                <MainContainer>
-                    <Sidebar />
+                <ErrorBoundary fallback={<p>Error...</p>}>
+                    <MainContainer>
+                    <Sidebar/>
                     <ContainerPage>
                         <Navbar/>
                         <AppRouter/>
                     </ContainerPage>
                 </MainContainer>
+                </ErrorBoundary>
+
             </Suspense>
         </ThemeProvider>
     )
