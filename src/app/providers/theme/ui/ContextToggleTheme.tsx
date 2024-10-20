@@ -1,6 +1,6 @@
-import {ToggleThemeProvider} from "../lib/ToggleThemeProvider.ts";
+import {ToggleThemeProvider} from "../lib/ToggleThemeProvider";
 import {ReactNode, useEffect, useState} from "react";
-import {Theme} from "../../../App.tsx";
+import {Theme} from "../../../App";
 
 
 export const ContextToggleTheme= ({children}: {children: ReactNode}) => {

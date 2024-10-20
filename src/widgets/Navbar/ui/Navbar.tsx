@@ -5,9 +5,11 @@ import {Theme} from "../../../app/App";
 import {SubTitle} from "../../../app/styles/variables/components";
 import {dataNavBar} from "../../../shared/utils/dataNavbar";
 import {SwitchLang} from "../../SwitchLang/ui/SwitchLang";
+import {useTranslation} from "react-i18next";
 
 export const Navbar = () => {
     const {theme, toggleTheme} = useTheme()
+    const {t} = useTranslation()
 
     return (
         <BlockNavbar>
@@ -17,7 +19,7 @@ export const Navbar = () => {
                         return (
                                 <ItemNavLinks key={index}>
                                     <Link to={link}>
-                                        <SubTitle>{label}</SubTitle>
+                                        <SubTitle>{t(label)}</SubTitle>
                                     </Link>
                                 </ItemNavLinks>
                         )})}

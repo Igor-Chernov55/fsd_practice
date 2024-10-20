@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {colors, fonts} from "../mixins/mixins.ts";
+import {colors, fonts} from "../mixins/mixins";
 
 export const Title = styled.h1`
     color: ${colors.darkGray};

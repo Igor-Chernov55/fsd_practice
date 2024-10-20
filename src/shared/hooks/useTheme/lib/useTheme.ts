@@ -1,8 +1,8 @@
 import {useContext} from "react";
 import {
     ToggleThemeProvider,
-} from "../../../../app/providers/theme/lib/ToggleThemeProvider.ts";
-import {Theme} from "../../../../app/App.tsx";
+} from "../../../../app/providers/theme/lib/ToggleThemeProvider";
+import {Theme} from "../../../../app/App";
 
 
 export const useTheme = () => {

@@ -1,8 +1,8 @@
 import {useTranslation} from "react-i18next";
-import {langData} from "../../../shared/config/langConfig/langData.ts";
+import {langData} from "../../../shared/config/langConfig/langData";
 
 export const SwitchLang = () => {
-    const { i18n} = useTranslation();
+    const { i18n} = useTranslation('about');
 
     const toggleSwitchLang = (e: any) => {
         i18n.changeLanguage(e.target.value)

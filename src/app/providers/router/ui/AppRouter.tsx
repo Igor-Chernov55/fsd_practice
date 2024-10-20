@@ -1,8 +1,7 @@
 import {Suspense} from "react";
 import {Route, Routes} from "react-router-dom";
-import {routeConfig} from "../../../../shared/config/routeConfig/routeConfig.tsx";
-import {ContainerFromElement} from "./AppRouter.styled.ts";
-import {PageLoader} from "../../../../widgets/PageLoader/ui/PageLoader/PageLoader";
+import {routeConfig} from "../../../../shared/config/routeConfig/routeConfig";
+import {ContainerFromElement} from "./AppRouter.styled";
 
 export const AppRouter = () => {
     return (
@@ -10,7 +9,7 @@ export const AppRouter = () => {
             <Routes>
                 {Object.values(routeConfig).map(({path, element}, key) => (
                     <Route key={key} path={path} element={
-                        <Suspense fallback={<PageLoader/>}>
+                        <Suspense fallback={<p>sd</p>}>
                             <ContainerFromElement>
                                 {element}
                             </ContainerFromElement>
