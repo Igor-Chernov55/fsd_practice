@@ -11,7 +11,13 @@ export default [
       rules: {
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off"
-    }},
+    },
+      settings: {
+          react: {
+              version: "detect",
+          },
+      },
+    },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
