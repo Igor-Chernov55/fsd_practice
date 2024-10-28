@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   collectCoverage: false,
   collectCoverageFrom: [],
   coverageDirectory: '',
@@ -12,8 +12,12 @@ module.exports = {
     '/node_modules/(?!ol|color-space|color-rgba|color-parse|color-name|quick-lru|geotiff)',
     '\\.svg$',
   ],
+  modulePaths: [
+      '<rootDir>src'
+  ]
+  ,
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  moduleNameMapper: {
-    '\\.(svg)$': '<rootDir>/src/mocks/fileMock.js',
-  },
+  // moduleNameMapper: {
+  //   '\\.(svg)$': '<rootDir>/src/mocks/fileMock.js',
+  // },
 };
