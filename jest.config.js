@@ -1,9 +1,9 @@
-export default {
+module.exports = {
   collectCoverage: false,
   collectCoverageFrom: [],
   coverageDirectory: '',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
   transform: {
     '^.+\\.(ts|tsx)?$': 'ts-jest',
     '^.+\\.(js|jsx)$': 'babel-jest',

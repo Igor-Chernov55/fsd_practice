@@ -25,7 +25,7 @@
     "tests/**/*.ts",
     "tests/**/*.tsx",
     "setupTests.ts",
-    "./jest.setup.js"
+    "./jest-setup.ts"
   ],
   "ts-node": {
     "compilerOptions": {
