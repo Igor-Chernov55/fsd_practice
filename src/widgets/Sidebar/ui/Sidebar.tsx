@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {BlockSidebar} from "./SideBar.styled.ts";
+import {BlockSidebar} from "./SideBar.styled";
 
 export const Sidebar = () => {
     const [collapsed, setCollapsed] = useState(false);
@@ -9,7 +9,9 @@ export const Sidebar = () => {
     }
 
     return (
-        <BlockSidebar $active={collapsed}>
+        <BlockSidebar
+            data-testid="sidebar-toggle"
+            $active={collapsed}>
             <button onClick={handleCollapsed}>
                 toggle
             </button>

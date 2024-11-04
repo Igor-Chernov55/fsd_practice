@@ -7,7 +7,12 @@ const AboutPage = () => {
     const {t} = useTranslation("aboutUs");
 
     return (
-       <Title>{t('О сайте')}</Title>
+        <>
+            <Title>{t('О сайте')}</Title>
+            <p>
+                some
+            </p>
+        </>
     );
 };
 export default AboutPage;

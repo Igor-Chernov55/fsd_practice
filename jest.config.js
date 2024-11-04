@@ -1,3 +1,4 @@
+const {resolve} = require("node:path");
 module.exports = {
   collectCoverage: false,
   collectCoverageFrom: [],
@@ -10,14 +11,14 @@ module.exports = {
   },
   transformIgnorePatterns: [
     '/node_modules/(?!ol|color-space|color-rgba|color-parse|color-name|quick-lru|geotiff)',
-    '\\.svg$',
+    // '\\.svg$',
   ],
   modulePaths: [
       '<rootDir>src'
   ]
   ,
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  // moduleNameMapper: {
-  //   '\\.(svg)$': '<rootDir>/src/mocks/fileMock.js',
-  // },
+  moduleNameMapper: {
+    '\\.svg': resolve(__dirname, 'jestEmptyComponent.tsx'),
+  }
 };
