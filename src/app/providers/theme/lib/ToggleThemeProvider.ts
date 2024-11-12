@@ -1,5 +1,5 @@
 import {createContext} from "react";
-import {Theme} from "../../../App.tsx";
+import {Theme} from "../../../App";
 
 export interface ToggleThemeProviderProps {
     theme?: Theme;

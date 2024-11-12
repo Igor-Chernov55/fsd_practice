@@ -12,11 +12,8 @@ describe("Sidebar", () => {
         render(<Sidebar />);
 
         fireEvent.click(screen.getByRole('button'));
-
         expect(screen.getByTestId('sidebar-toggle')).toHaveStyle('width: 160px');
-
         fireEvent.click(screen.getByRole('button'));
-
         expect(screen.getByTestId('sidebar-toggle')).toHaveStyle('width: 40px');
     });
 

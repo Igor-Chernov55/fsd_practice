@@ -1,10 +1,6 @@
 import {useTranslation} from "react-i18next";
 import {BlockNotFound} from "./NotFoundPage.styled";
 
-interface NotFoundPageProps {
-    
-}
-
 export const NotFoundPage = () => {
     const { t } = useTranslation();
 
