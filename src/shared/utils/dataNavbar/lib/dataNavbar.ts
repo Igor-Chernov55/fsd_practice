@@ -1,4 +1,4 @@
-import {AppRoutes} from "../../../config/routeConfig/routeConfig.tsx";
+import {AppRoutes} from "../../../config/routeConfig/routeConfig";
 
 
 export const dataNavBar = [
